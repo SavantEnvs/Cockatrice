@@ -1,0 +1,11 @@
+project: savantenvs/Cockatrice
+target: deck-plain
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/deck-plain/testsuite
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz/fuzz_deck_plain
+    libfuzzer: true
+    timeout: 5
+    env:
+      QT_QPA_PLATFORM: offscreen

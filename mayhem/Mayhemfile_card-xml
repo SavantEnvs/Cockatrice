@@ -1,0 +1,11 @@
+project: savantenvs/Cockatrice
+target: card-xml
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/card-xml/testsuite
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz/fuzz_card_xml
+    libfuzzer: true
+    timeout: 5
+    env:
+      QT_QPA_PLATFORM: offscreen

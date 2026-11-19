@@ -1,0 +1,11 @@
+project: savantenvs/Cockatrice
+target: spoiler-xml
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/spoiler-xml/testsuite
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz/fuzz_spoiler_xml
+    libfuzzer: true
+    timeout: 5
+    env:
+      QT_QPA_PLATFORM: offscreen

@@ -1,0 +1,6 @@
+# Used by BuildKit instead of upstream's root .dockerignore when building with -f mayhem/Dockerfile.
+# Upstream's file drops cockatrice/, oracle/, docs/ and .github/ (its server image doesn't need them),
+# but the commit image must hold the WHOLE repo (the test suite compiles sources from cockatrice/ and
+# oracle/). Only local build output is excluded.
+build-fuzz/
+build-tests/

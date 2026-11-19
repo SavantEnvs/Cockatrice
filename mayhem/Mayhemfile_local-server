@@ -1,0 +1,11 @@
+project: savantenvs/Cockatrice
+target: local-server
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/local-server/testsuite
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz/fuzz_local_server
+    libfuzzer: true
+    timeout: 5
+    env:
+      QT_QPA_PLATFORM: offscreen

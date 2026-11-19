@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cockatrice_deck version="1">
+    <deckname>Fuzz Deck</deckname>
+    <comments>seed</comments>
+    <bannerCard providerId="abc">Island</bannerCard>
+    <tags><tag>aggro</tag></tags>
+    <zone name="main">
+        <card number="4" name="Lightning Bolt" setShortName="M10" collectorNumber="146"/>
+        <card number="20" name="Mountain"/>
+    </zone>
+    <zone name="side">
+        <card number="2" name="Pyroblast"/>
+    </zone>
+    <zone name="tokens">
+        <card number="1" name="Goblin"/>
+    </zone>
+</cockatrice_deck>

@@ -1,0 +1,11 @@
+project: savantenvs/Cockatrice
+target: oracle-json
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/oracle-json/testsuite
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz/fuzz_oracle_json
+    libfuzzer: true
+    timeout: 5
+    env:
+      QT_QPA_PLATFORM: offscreen

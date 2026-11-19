@@ -1,0 +1,11 @@
+project: savantenvs/Cockatrice
+target: oracle-zip
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/oracle-zip/testsuite
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz/fuzz_oracle_zip
+    libfuzzer: true
+    timeout: 5
+    env:
+      QT_QPA_PLATFORM: offscreen
